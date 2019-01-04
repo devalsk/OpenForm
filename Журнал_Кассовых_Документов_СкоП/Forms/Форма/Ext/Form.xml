@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДинамическийСписок1" id="20">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>ДинамическийСписок</DataPath>
+			<RowPictureDataPath>ДинамическийСписок.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ДинамическийСписок1КонтекстноеМеню" id="21"/>
+			<AutoCommandBar name="ДинамическийСписок1КоманднаяПанель" id="22">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="Поступление" id="90">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Поступление</CommandName>
+						<ExtendedTooltip name="ПоступлениеРасширеннаяПодсказка" id="91"/>
+					</Button>
+					<Button name="ДинамическийСписок1Выдача" id="92">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Выдача</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЗначокМинус</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДинамическийСписок1ВыдачаРасширеннаяПодсказка" id="93"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДинамическийСписок1РасширеннаяПодсказка" id="23"/>
+			<SearchStringAddition name="ДинамическийСписок1СтрокаПоиска" id="24">
+				<AdditionSource>
+					<Item>ДинамическийСписок1</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДинамическийСписок1СтрокаПоискаКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ДинамическийСписок1СтрокаПоискаРасширеннаяПодсказка" id="26"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДинамическийСписок1СостояниеПросмотра" id="27">
+				<AdditionSource>
+					<Item>ДинамическийСписок1</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДинамическийСписок1СостояниеПросмотраКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ДинамическийСписок1СостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДинамическийСписок1УправлениеПоиском" id="30">
+				<AdditionSource>
+					<Item>ДинамическийСписок1</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДинамическийСписок1УправлениеПоискомКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ДинамическийСписок1УправлениеПоискомРасширеннаяПодсказка" id="32"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДинамическийСписок1Валюта" id="33">
+					<DataPath>~ДинамическийСписок.Валюта</DataPath>
+					<ContextMenu name="ДинамическийСписок1ВалютаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ДинамическийСписок1ВалютаРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="ДинамическийСписок1Дата" id="39">
+					<DataPath>~ДинамическийСписок.Дата</DataPath>
+					<ContextMenu name="ДинамическийСписок1ДатаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДинамическийСписок1ДатаРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+				<LabelField name="ДинамическийСписок1Номер" id="51">
+					<DataPath>~ДинамическийСписок.Номер</DataPath>
+					<ContextMenu name="ДинамическийСписок1НомерКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ДинамическийСписок1НомерРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<LabelField name="ДинамическийСписок1Ссылка" id="81">
+					<DataPath>~ДинамическийСписок.Ссылка</DataPath>
+					<ContextMenu name="ДинамическийСписок1СсылкаКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ДинамическийСписок1СсылкаРасширеннаяПодсказка" id="83"/>
+				</LabelField>
+				<CheckBoxField name="ДинамическийСписок1Проведен" id="69">
+					<DataPath>~ДинамическийСписок.Проведен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДинамическийСписок1ПроведенКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ДинамическийСписок1ПроведенРасширеннаяПодсказка" id="71"/>
+				</CheckBoxField>
+				<LabelField name="ДинамическийСписок1СсылкаСчетКасса" id="84">
+					<DataPath>~ДинамическийСписок.СсылкаСчетКасса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет учета</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДинамическийСписок1СсылкаСчетКассаКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ДинамическийСписок1СсылкаСчетКассаРасширеннаяПодсказка" id="86"/>
+				</LabelField>
+				<LabelField name="ДинамическийСписок1Тип" id="87">
+					<DataPath>~ДинамическийСписок.Тип</DataPath>
+					<ContextMenu name="ДинамическийСписок1ТипКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДинамическийСписок1ТипРасширеннаяПодсказка" id="89"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.Журнал_Кассовых_Документов_СкоП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДинамическийСписок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Динамический список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ЖурналДокументовКассовыеДокументы.Ссылка ССЫЛКА Документ.РасходныйКассовыйОрдер
+			ТОГДА ВЫРАЗИТЬ(ЖурналДокументовКассовыеДокументы.Ссылка КАК Документ.РасходныйКассовыйОрдер)
+		ИНАЧЕ ВЫРАЗИТЬ(ЖурналДокументовКассовыеДокументы.Ссылка КАК Документ.ПриходныйКассовыйОрдер)
+	КОНЕЦ КАК Ссылка,
+	ЖурналДокументовКассовыеДокументы.Дата КАК Дата,
+	ЖурналДокументовКассовыеДокументы.ПометкаУдаления КАК ПометкаУдаления,
+	ЖурналДокументовКассовыеДокументы.Номер КАК Номер,
+	ЖурналДокументовКассовыеДокументы.Проведен КАК Проведен,
+	ЖурналДокументовКассовыеДокументы.Организация КАК Организация,
+	ЖурналДокументовКассовыеДокументы.Доход КАК Приход,
+	ЖурналДокументовКассовыеДокументы.Валюта КАК Валюта,
+	ЖурналДокументовКассовыеДокументы.Контрагент КАК Контрагент,
+	ЖурналДокументовКассовыеДокументы.Ответственный КАК Ответственный,
+	ЖурналДокументовКассовыеДокументы.Комментарий КАК Комментарий,
+	ЖурналДокументовКассовыеДокументы.ВидОперации КАК ВидОперации,
+	ЖурналДокументовКассовыеДокументы.РучнаяКорректировка КАК РучнаяКорректировка,
+	ЖурналДокументовКассовыеДокументы.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	ЖурналДокументовКассовыеДокументы.Расход КАК Расход,
+	ЖурналДокументовКассовыеДокументы.Тип КАК Тип,
+	ВЫБОР
+		КОГДА ЖурналДокументовКассовыеДокументы.РучнаяКорректировка = ИСТИНА
+			ТОГДА ВЫБОР
+					КОГДА ЖурналДокументовКассовыеДокументы.ПометкаУдаления = ИСТИНА
+						ТОГДА 10
+					КОГДА ЖурналДокументовКассовыеДокументы.Проведен = ЛОЖЬ
+						ТОГДА 9
+					ИНАЧЕ 8
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ЖурналДокументовКассовыеДокументы.ПометкаУдаления = ИСТИНА
+					ТОГДА 2
+				КОГДА ЖурналДокументовКассовыеДокументы.Проведен = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК СостояниеДокумента,
+	НаличиеФайлов.ЕстьФайлы КАК ЕстьФайлы,
+	ЖурналДокументовКассовыеДокументы.Ссылка.СчетКасса КАК СсылкаСчетКасса
+ИЗ
+	ЖурналДокументов.Деньги КАК ЖурналДокументовКассовыеДокументы
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеФайлов
+		ПО ЖурналДокументовКассовыеДокументы.Ссылка = НаличиеФайлов.ОбъектСФайлами}
+ГДЕ
+	(ЖурналДокументовКассовыеДокументы.Ссылка ССЫЛКА Документ.ПриходныйКассовыйОрдер
+			ИЛИ ЖурналДокументовКассовыеДокументы.Ссылка ССЫЛКА Документ.РасходныйКассовыйОрдер)</QueryText>
+				<MainTable>DocumentJournal.Деньги</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СсылкаСчетКасса.Код</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">50.02</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Поступление" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗначокПлюс</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Поступление</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выдача" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдача</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выдача</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
